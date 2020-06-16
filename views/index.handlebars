@@ -1,0 +1,49 @@
+<div class="container">
+     <div class="row ">
+          <div class="col s12">
+               <div class="card white burger-store">
+                    <h1 class="center-align title">Burger Buttons</h1>
+                    <div class="col sm8 offset-s2 m6 task">
+                         {{#each burger_data}}
+                         {{#unless this.devoured}}
+                         <div class="col s9  ">
+                              {{this.id}}. {{this.burger_name}}
+                         </div>
+                         <div class="col s3 center-align">
+                              <form method="POST" action="/burgers/update?_method=PUT">
+
+                                   <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                                   <button type="submit" class="btn waves-effect waves-light amber">Devour</button>
+                              </form><br>
+                         </div>
+                         {{/unless}}
+                         {{/each}}
+                         <br>
+                    </div>
+                    <div class="col sm8 offset-s2 m6 task">
+                         <div>
+                              {{#each burger_data}}
+                              {{#if this.devoured}}
+                              <input class="form-control" type="text" placeholder=" {{this.id}}. {{this.burger_name}}"
+                                   readonly>
+                              {{/if}}
+
+                              {{/each}}
+                         </div>
+                    </div>
+                    <div class="row">
+                         <form action="/burgers/create" method="POST" class="col s12">
+                              <input placeholder="Candy Cane Burger" name="burger_name" value="" id="enter_text">
+                              <label for="burger_input">Type in a burger.</label>
+                              <br><br>
+                              {{#if isNotBurger}}
+                              <p>Didn't work. Try again</p>
+                              {{/if}}
+                              <button class="btn waves-effect waves-light red" type="submit"
+                                   id="text-enter-button>">Submit</button>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>

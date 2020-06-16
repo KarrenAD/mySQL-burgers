@@ -1,0 +1,19 @@
+body{
+    background-color: #33aeff;
+}
+.title {
+    font-family: 'Luckiest Guy', cursive;
+}
+.task{
+    padding: 40px;
+}
+.burger-store{
+    padding: 40px;
+}
+.gif{
+    margin-left: 50px;
+}
+#speak-up{
+    display: none;
+
+}
