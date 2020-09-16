@@ -1,10 +1,10 @@
-### Overview
+### mySQL Burgers!
 
-In this assignment: 
+https://powerful-tor-25689.herokuapp.com/
 
-- I created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. 
+##Highlights
 
-- I followed the MVC design pattern 
-
-- I used Node and MySQL to query and route data in my app, and Handlebars to generate my HTML.
+- User-entered burger gets saved to mySQL database, with option to devour.
+- Devour button querries the DB and changes the devoured value of the selected item to TRUE.
+- DB items with TRUE devoured value get moved to devoured column.
 
